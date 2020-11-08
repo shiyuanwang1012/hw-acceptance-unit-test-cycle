@@ -21,11 +21,11 @@ module NavigationHelpers
     when /^the edit page for "(.*)"$/i
       edit_movie_path(Movie.find_by_title($1))
       
-    when /^the details page for "(.*)"$/I
+    when /^the details page for "(.*)"$/i
       movie_path(Movie.find_by_title($1))
       
-    when /^the Similar Movies page for "(.*)"$/I
-      movie_similar_path(Movie.find_by_title($1))
+    when /^the Similar Movies page for "(.*)"$/i
+      c(Movie.find_by_title($1).id)
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
